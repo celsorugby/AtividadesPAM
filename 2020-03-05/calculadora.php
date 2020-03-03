@@ -29,17 +29,20 @@ if(
         exit;
     }
 
+    $operador = "";
+    
     $resposta["total"] = $resultado;
     
-    if($numero1+$numero2){
+    if($operador == "+"){
         $resposta["Soma"]= ($numero1+$numero2);
-    }else if($numero1-$numero2){
+    }else if($operador == "-"){
         $resposta["Subtração"]= ($numero1-$numero2);
-    }else if($numero1*$numero2){
+    }else if($operador == "*"){
         $resposta["Multiplicação"]= ($numero1*$numero2);
-    }else if($numero1/$numero2){
+    }else if($operador == "/"){
         $resposta["Divião"]= ($numero1/$numero2);
-        exit;
+    }else{
+        $resposta[Erro] = "operador invalido";
     }
 
 
