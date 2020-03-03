@@ -42,7 +42,7 @@ if(
     }else if($operador == "/"){
         $resposta["Divião"]= ($numero1/$numero2);
     }else{
-        $resposta[Erro] = "operador invalido";
+        $resposta["ERRO"] = "operador invalido";
     }
 
 
