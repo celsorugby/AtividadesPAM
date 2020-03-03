@@ -28,14 +28,20 @@ if(
         echo $msg;
         exit;
     }
+
+    $resposta["total"] = $resultado;
     
     if($numero1+$numero2){
-        echo"Sua soma é"+($numero1+$numero2);
+        $resposta["Soma"]= ($numero1+$numero2);
     }else if($numero1-$numero2){
-        echo "Sua subtração é"+($numero1-$numero2);
+        $resposta["Subtração"]= ($numero1-$numero2);
     }else if($numero1*$numero2){
-        echo "Sua multiplicação é"+($numero1*$numero2);
+        $resposta["Multiplicação"]= ($numero1*$numero2);
     }else if($numero1/$numero2){
-        echo "Sua divisão é"+($numero1/$numero2);
+        $resposta["Divião"]= ($numero1/$numero2);
         exit;
     }
+
+
+    echo json_encode($resposta);
+    
