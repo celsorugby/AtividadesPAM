@@ -1,25 +1,30 @@
 <?php
 
 if( 
-    !isset($_REQUEST["numero1"])      || 
-          $_REQUEST["numero1"]  >0 && <=10  ||
-    !isset($_REQUEST["numero2"])     || 
-          $_REQUEST["numero2"]  >0 && <=10  ||
-    !isset($_REQUEST["numero3"])      || 
-          $_REQUEST["numero3"]  >0 && <=10  ||
-    !isset($_REQUEST["numero4"])      || 
-          $_REQUEST["numero4"]  >0 && <=10 
+    !isset($_REQUEST["numero1"]) || 
+    !isset($_REQUEST["numero2"]) || 
+    !isset($_REQUEST["numero3"]) || 
+    !isset($_REQUEST["numero4"]) || 
 ){
     
     echo"paramentros inválidos. Não da para fazer a conta";
     exit;
-}
+
+}else{
     $numero1 = $_REQUEST['numero1'];
     $numero2 = $_REQUEST['numero2'];
     $numero3 = $_REQUEST['numero3'];
     $numero4 = $_REQUEST['numero4'];
+}
 
-    $msg = "";
+if($numero1 <0 || $numero1 > 10||
+   $numero2 <0 || $numero2 > 10||
+   $numero3 <0 || $numero3 > 10||
+   $numero4 <0 || $numero4 > 10||
+){
+    echo"Foi informado um valor nao permitido";
+    exit;
+}
 
     if(!is_numeric($numero1) ){
         $msg.= "voce informou o paramentro numero1 invalido";
