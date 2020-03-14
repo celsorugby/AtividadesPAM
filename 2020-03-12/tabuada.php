@@ -17,7 +17,8 @@
     }
 
     $tabuada = 0;
+    $i = 0;
 
-    for($tabuada>=0 || $tabuada<=10;i++){
+    for($tabuada>=0 || $tabuada<=10;$i++){
         echo("sao elas"+($tabuada*i));
     }
